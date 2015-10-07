@@ -15,6 +15,7 @@ float x, y;
 //// SETUP:  window size, initialization (start in middle of screen).
 void setup() {
   size( 840,680);
+  horizon=  height/4;
   x=  width/2;
   y=  height/2;
 }
@@ -46,7 +47,7 @@ void scene() {
   fill(139,69,19);//color of tree bark
   rect(horizon-10,horizon-30,20,30);//bark of tree
   fill(34,139,34);//color of leaves
-  ellipse( horizon,horizon-50, 100,horizon-50  );  // leaves
+  ellipse( horizon,horizon-70, 100,horizon-80  );  // leaves
 }
 
 ////Hero:arms,legs,head body, sword
@@ -120,3 +121,4 @@ void keyPressed() {
   if (key == 'q') {
     exit();                           // press 'q' key to QUIT.
   }
+}
