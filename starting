@@ -15,6 +15,8 @@ float x, y;
 //// SETUP:  window size, initialization (start in middle of screen).
 void setup() {
   size( 840,680);
+  x=  width/2;
+  y=  height/2;
 }
 
 //// NEXT FRAME:  scene, action, show.
@@ -28,28 +30,42 @@ void draw() {
 
 ////Scene: blood moon, grass, sky, clouds, tree
 void scene() {  
+
+  //sky
+  background( 0,191,255 ); 
   
   //Moon
   
   //grass
-  
-  //sky
+  fill( 100,200,100 );
+  rect( 0,horizon, width,height*3/4 ); 
   
   //clouds
   
   //trees
+  fill(139,69,19);//color of tree bark
+  rect(horizon-10,horizon-30,20,30);//bark of tree
+  fill(34,139,34);//color of leaves
+  ellipse( horizon,horizon-50, 100,horizon-50  );  // leaves
 }
 
 ////Hero:arms,legs,head body, sword
 void hero() {
 
   //head
-  
+   fill(245,222,179); //color of face
+   ellipse(x, y, 80, 80);//face
+   
     ///hair
     
     ///eyes
+      fill(176,224,230);//color of eyes
+      ellipse(x,y,10,10);//right eye
+      ellipse(x+40,y,10,10);// left eye
     
     ///mouth
+      fill(220,20,60);//color of mouth
+      rect(x+10,y+10,30,10); //mouth    
   
   //body
   
@@ -99,7 +115,7 @@ void messages() {
   text( title, width/3, 20 );
 }
 
-////Exiting the porgram
+////Exiting the program
 void keyPressed() {
   if (key == 'q') {
     exit();                           // press 'q' key to QUIT.
