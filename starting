@@ -7,6 +7,8 @@ String title=  "Revenge of a Restless Spirit";
 
 
 //// GLOBALS:  coordinates, speed, etc.
+float heroX,heroY
+float monsterX,monsterY
 
 
 //// SETUP:  window size, initialization (start in middle of screen).
