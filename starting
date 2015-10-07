@@ -94,6 +94,11 @@ void monster() {
   
 }
 
+////Showing title
+void messages() {
+  text( title, width/3, 20 );
+}
+
 ////Exiting the porgram
 void keyPressed() {
   if (key == 'q') {
