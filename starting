@@ -1,0 +1,98 @@
+///Project 1
+///Evelyn Levine
+
+////Project name
+String title=  "Revenge of a Restless Spirit";
+
+
+
+//// GLOBALS:  coordinates, speed, etc.
+
+
+//// SETUP:  window size, initialization (start in middle of screen).
+void setup() {
+  size( 840,680);
+}
+
+//// NEXT FRAME:  scene, action, show.
+void draw() {
+  scene();
+  hero();
+  monster();
+  messages();
+}
+
+
+////Scene: blood moon, grass, sky, clouds, tree
+void scene() {  
+  
+  //Moon
+  
+  //grass
+  
+  //sky
+  
+  //clouds
+  
+  //trees
+}
+
+////Hero:arms,legs,head body, sword
+void hero() {
+
+  //head
+  
+    ///hair
+    
+    ///eyes
+    
+    ///mouth
+  
+  //body
+  
+  //arms
+  
+    ///hands
+  
+  //legs
+  
+    ///feet
+  
+  //sword
+  
+    ///hilt
+    
+    ///blade
+  
+}
+
+////Monster:head,body,arms,legs
+void monster() {
+
+  //head
+  
+    ///hair
+    
+    ///eyes
+    
+    ///mouth
+    
+    ///nose
+  
+  //body
+  
+  //arms
+  
+    ///hands with claws
+  
+  //legs
+  
+    ///feet with claws
+  
+}
+
+////Exiting the porgram
+void keyPressed() {
+  if (key == 'q') {
+    exit();                           // press 'q' key to QUIT.
+  }
