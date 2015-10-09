@@ -7,17 +7,21 @@ String title=  "Revenge of a Restless Spirit";
 
 
 //// GLOBALS:  coordinates, speed, etc.
-float heroX,heroY
-float monsterX,monsterY
-float horizon;
-float x, y;  
+float moonX=0;
+float moonY=50;
+float heroX,heroY;
+//float monsterX,monsterY;
+float horizon; 
 
 //// SETUP:  window size, initialization (start in middle of screen).
 void setup() {
   size( 840,680);
   horizon=  height/4;
-  x=  width/2;
-  y=  height/2;
+  heroX=mouseX;
+  heroY=mouseY;
+  //monsterX = monsterX + ( heroX - monsterX ) / 45;
+ // monsterY = monsterY + ( heroY - monsterY ) /45;
+
 }
 
 //// NEXT FRAME:  scene, action, show.
@@ -33,15 +37,17 @@ void draw() {
 void scene() {  
 
   //sky
-  background( 0,191,255 ); 
+  background( 70,130,180 ); 
   
   //Moon
+  fill(255,255,224);
+  ellipse(moonX,moonY,50,50);
+  moonX=moonX+1;
+  moonX=moonX%+width;
   
   //grass
   fill( 100,200,100 );
   rect( 0,horizon, width,height*3/4 ); 
-  
-  //clouds
   
   //trees
   fill(139,69,19);//color of tree bark
@@ -55,21 +61,22 @@ void hero() {
 
   //head
    fill(245,222,179); //color of face
-   ellipse(x, y, 80, 80);//face
+   ellipse(mouseX, mouseY, 80, 80);//face
    
     ///hair
     
     ///eyes
       fill(176,224,230);//color of eyes
-      ellipse(x,y,10,10);//right eye
-      ellipse(x+40,y,10,10);// left eye
+      ellipse(mouseX,mouseY,10,10);//right eye
+      ellipse(mouseX+40,mouseY,10,10);// left eye
     
     ///mouth
       fill(220,20,60);//color of mouth
-      rect(x+10,y+10,30,10); //mouth    
+      rect(mouseX+10,mouseY+10,30,10); //mouth    
   
   //body
-  
+    
+    rect(mouseX-10, mouseY+40, 30,80);
   //arms
   
     ///hands
@@ -89,8 +96,8 @@ void hero() {
 ////Monster:head,body,arms,legs
 void monster() {
 
-  //head
-  
+    //head
+  //ellipse(monsterX,monsterY,60,60);
     ///hair
     
     ///eyes
@@ -102,7 +109,7 @@ void monster() {
     ///ears
   
   //body
-  
+ // ellipse(monsterX, monsterY-25, 20,20);
   //arms
   
     ///hands with claws
