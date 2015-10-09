@@ -75,14 +75,20 @@ void hero() {
       rect(mouseX+10,mouseY+10,30,10); //mouth    
   
   //body
+    fill(47,79,79);//body color
+    rect(mouseX-10, mouseY+40, 30,50);//body
     
-    rect(mouseX-10, mouseY+40, 30,80);
   //arms
-  
+    ellipse(mouseX-10,mouseY+60,20,50);//right arm
+    ellipse(mouseX+20,mouseY+60,20,50);//left arm
     ///hands
-  
+    fill(245,222,179);
+    ellipse(mouseX,mouseY+75,20,20);//right hand
+    ellipse(mouseX+20,mouseY+75,20,20);//left hand
   //legs
-  
+    fill(255,255,240);
+    rect(mouseX-10,mouseY+90,15,30);
+    rect(mouseX+5,mouseY+90,15,30);//left leg
     ///feet
   
   //sword
