@@ -10,7 +10,7 @@ String title=  "Revenge of a Restless Spirit";
 float moonX=0;
 float moonY=50;
 float heroX,heroY;
-//float monsterX,monsterY;
+float monsterX,monsterY;
 float horizon; 
 
 //// SETUP:  window size, initialization (start in middle of screen).
@@ -19,8 +19,8 @@ void setup() {
   horizon=  height/4;
   heroX=mouseX;
   heroY=mouseY;
-  //monsterX = monsterX + ( heroX - monsterX ) / 45;
- // monsterY = monsterY + ( heroY - monsterY ) /45;
+  monsterX = monsterX + ( heroX - monsterX ) / 45;
+  monsterY = monsterY + ( heroY - monsterY ) /45;
 
 }
 
@@ -101,9 +101,12 @@ void hero() {
 
 ////Monster:head,body,arms,legs
 void monster() {
-
+ monsterX = monsterX + ( mouseX - monsterX ) / 45;
+ monsterY = monsterY + ( mouseY - monsterY ) /45;
+ 
     //head
-  //ellipse(monsterX,monsterY,60,60);
+      ellipse(monsterX,monsterY,60,60);
+      
     ///hair
     
     ///eyes
@@ -115,7 +118,7 @@ void monster() {
     ///ears
   
   //body
- // ellipse(monsterX, monsterY-25, 20,20);
+
   //arms
   
     ///hands with claws
