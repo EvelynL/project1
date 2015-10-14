@@ -131,6 +131,7 @@ void monster() {
 
 ////Showing title
 void messages() {
+  fill(0,0,153);
   text( title, width/3, 20 );
 }
 
