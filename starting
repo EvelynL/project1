@@ -62,8 +62,6 @@ void hero() {
   //head
    fill(245,222,179); //color of face
    ellipse(mouseX, mouseY, 80, 80);//face
-   
-    ///hair
     
     ///eyes
       fill(176,224,230);//color of eyes
@@ -81,22 +79,31 @@ void hero() {
   //arms
     ellipse(mouseX-10,mouseY+60,20,50);//right arm
     ellipse(mouseX+20,mouseY+60,20,50);//left arm
+    
     ///hands
     fill(245,222,179);
     ellipse(mouseX,mouseY+75,20,20);//right hand
     ellipse(mouseX+20,mouseY+75,20,20);//left hand
-  //legs
-    fill(255,255,240);
-    rect(mouseX-10,mouseY+90,15,30);
-    rect(mouseX+5,mouseY+90,15,30);//left leg
-    ///feet
-  
-  //sword
-  
-    ///hilt
     
-    ///blade
+  //legs
+    fill(255,255,240);//color of legs
+    rect(mouseX-10,mouseY+90,15,30);//right leg
+    rect(mouseX+5,mouseY+90,15,30);//left leg
+    
+    ///feet
+     fill(78,37,37);//color of feet
+     ellipse(mouseX+15,mouseY+120,20,20);//right foot
+     ellipse(mouseX,mouseY+120,20,20);//left foot
+    
+  //gun
   
+    ///grip
+    fill(128,128,128);
+       rect(mouseX+9,mouseY+70,8,20);
+    
+    
+    ///cylinder
+       rect(mouseX+6,mouseY+64,30,10);
 }
 
 ////Monster:head,body,arms,legs
@@ -104,11 +111,10 @@ void monster() {
  monsterX = monsterX + ( mouseX - monsterX ) / 45;
  monsterY = monsterY + ( mouseY - monsterY ) /45;
  
-    //head
+  //head
+      fill(0,0,0);
       ellipse(monsterX,monsterY,60,60);
       
-    ///hair
-    
     ///eyes
     
     ///mouth
