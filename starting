@@ -116,22 +116,37 @@ void monster() {
       ellipse(monsterX,monsterY,60,60);
       
     ///eyes
-    
+       fill(255,0,0);
+       ellipse(monsterX-10,monsterY,10,20);//right eye
+       ellipse(monsterX+10,monsterY,10,20);//left eye
+         //pupils
+           fill(0,0,0);//pupil color
+           ellipse(monsterX+10,monsterY,5,10);//left pupil
+           ellipse(monsterX-10,monsterY,5,10);//right pupil
+       
     ///mouth
     
-    ///nose
+    //nose
     
-    ///ears
+    //ears
+      stroke(105,105,105);
+      triangle(monsterX,monsterY-20,monsterX+23,monsterY-20,monsterX+5,monsterY-50);//left ear
+      triangle(monsterX,monsterY-20,monsterX-23,monsterY-20,monsterX-5,monsterY-50);//right ear
+      
+        ///inner ear
+           fill(255,182,193);
+           triangle(monsterX+8,monsterY-20,monsterX+18,monsterY-20,monsterX+6,monsterY-45);//left inner ear
+           triangle(monsterX-7,monsterY-20,monsterX-18,monsterY-20,monsterX-6,monsterY-45);//right inner ear
   
-  //body
+    //body
 
-  //arms
+    //arms
   
-    ///hands with claws
+      ///hands with claws
   
-  //legs
+    //legs
   
-    ///feet with claws
+      ///feet with claws
   
 }
 
